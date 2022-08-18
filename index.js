@@ -27,3 +27,7 @@ app.get('/GPS/emit', (req,res) => {
     execSync("./scripts_gps/emission.sh", { encoding: "utf-8" });
     res.status(200).json({"message": "Fin de l'émission"});
 })
+
+app.listen(8080,() => {
+  console.log("Serveur à l'écoute");
+})
